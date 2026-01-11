@@ -1,43 +1,39 @@
-# Buscador de Tabela FIPE
+#  Buscador de Tabela FIPE
 
-Aplicação em Java para consulta de valores de veículos (Carros, Motos e Caminhões) utilizando a API pública da Tabela FIPE.
+Aplicação de consulta de preços médios de veículos (Carros, Motos e Caminhões), desenvolvida em Java com Spring Boot. O sistema consome a API pública da Tabela FIPE para trazer dados atualizados do mercado automobilístico brasileiro.
 
-Desenvolvido como parte do desafio do curso de **Java: Trabalhando com Lambdas, Streams e Spring Framework** da Alura.
+##  Sobre o Desafio
 
-## Funcionalidades
+Este projeto foi desenvolvido como **solução para o Desafio Final** do módulo de **Java: trabalhando com lambdas, streams e Spring Framework**
 
-- **Menu Interativo:** Escolha entre Carros, Motos ou Caminhões.
-- **Busca por Marcas:** Lista todas as marcas disponíveis.
-- **Filtragem de Modelos:** Permite digitar um trecho do nome (ex: "Palio") para filtrar a lista de modelos.
-- **Valores por Ano:** Exibe o valor do veículo para todos os anos disponíveis na tabela FIPE.
+O objetivo foi colocar em prática, **de forma autônoma**, os conhecimentos em consumo de APIs, manipulação de fluxos de dados e desserialização de objetos.
 
-## Tecnologias Utilizadas
+##  Funcionalidades
 
-- **Java 17**
-- **Spring Boot** (Framework principal)
-- **Maven** (Gerenciador de dependências)
-- **Jackson** (Desserialização de JSON)
-- **Java Streams & Lambdas** (Manipulação e filtro de dados)
+- **Menu Interativo:** Navegação fluida para escolha do tipo de veículo.
+- **Consulta de Marcas:** Listagem dinâmica das marcas disponíveis na API.
+- **Filtragem Inteligente:** Permite buscar modelos digitando apenas um trecho do nome (ex: digitar "Palio" e o sistema filtrar todas as versões do Palio).
+- **Histórico de Preços:** Exibe o valor do veículo selecionado para todos os anos disponíveis na tabela.
 
-## Aprendizados
+##  Tecnologias e Conceitos Aplicados
 
-Neste projeto, apliquei conceitos fundamentais de manipulação de dados em Java:
-- Consumo de API REST.
-- Conversão de dados (JSON -> Objeto Java) utilizando a interface `Generic`.
-- Uso de **Streams** para operações de fluxo de dados.
-- Métodos como `.filter()`, `.map()`, `.sorted()` e `.collect()`.
-- Manipulação de Listas e Collections.
+- **Java 21** e **Spring Boot 4**
+- **Consumo de API REST:** Integração com serviço externo via HTTP.
+- **Java Streams & Lambdas:** Uso intensivo para filtrar, mapear e ordenar grandes listas de dados trazidas da API.
+- **Jackson Library:** Conversão de JSON para Objetos Java.
+- **Generics:** Implementação de uma interface genérica para transformar o JSON em classes Record/DTOs, permitindo reaproveitamento de código.
 
-## Como executar
+##  Como executar o projeto
 
-Pré-requisitos: Java 17 instalado e Maven.
+### Pré-requisitos
+Certifique-se de ter o **Java 17+** e o **Maven** instalados.
 
 ```bash
-# Clone este repositório
+# 1. Clone o repositório
 git clone [https://github.com/gluizdev04/consultar-fipe.git](https://github.com/gluizdev04/consultar-fipe.git)
 
-# Acesse a pasta do projeto no terminal/cmd
+# 2. Entre na pasta do projeto
 cd consultar-fipe
 
-# Execute o projeto
+# 3. Execute a aplicação via terminal
 mvn spring-boot:run
